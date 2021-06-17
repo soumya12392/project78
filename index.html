@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Project 78</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@291&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <img id="photo" src="Project_78.png">
+    <br> <br>
+    <h4 id="family_member">My Family Book</h4>
+    <br> <br>
+    <button type="button" onclick = "update();">Next</button>
+
+    
+    
+    <script>
+    
+    var images = ["Project_78.png", "dad.jpg", "mom.jpg", "sister.jpg", "me.jpg", "family.jpg"];
+    var names = ["My Family Book", "Ravi Kant Singh, my Father", "Seema Singh, my Mother", "Srishti Singh, my Sister", "Soumya Singh, that's me!", "This is my Sweet and Lovely Family!"];
+
+    var i = 0;
+    function update()
+    {
+        i++;
+        var num_of_family_member = 5;
+        if(i > num_of_family_member)
+        {
+            i = 0;
+        }
+        var updated_image = images[i];
+        var updated_name = names[i];
+        
+        document.getElementById("photo").src = updated_image;
+        document.getElementById("family_member").innerHTML = updated_name;
+    }
+    
+    </script>
+
+</body>
+
+</html>
